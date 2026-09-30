@@ -1,0 +1,69 @@
+/*
+ * Rangkai design tokens. The single source for colours, type and elevation, shared by the app
+ * and (later) the PDF print template. Per-tenant theming may only change --accent.
+ */
+:root {
+  --bg: #F4F6FB;
+  --panel: #FFFFFF;
+  --panel-rgb: 255, 255, 255;
+  --ink: #0F172A;
+  --ink-2: #334155;
+  --muted: #64748B;
+  --line: rgba(15, 23, 42, .08);
+  --line-2: rgba(15, 23, 42, .15);
+  --soft: rgba(15, 23, 42, .045);
+  --accent: #3B82F6;
+  --accent-ink: #1D4ED8;
+  --accent-soft: rgba(59, 130, 246, .12);
+  --accent-shadow: rgba(59, 130, 246, .38);
+  --success: #10B981;
+  --warn: #F59E0B;
+  --danger: #EF4444;
+  --warn-ink: #92400E;
+  --grad: linear-gradient(135deg, #3B82F6 0%, #6366F1 100%);
+  --mesh:
+    radial-gradient(1000px 700px at 6% -10%, rgba(59, 130, 246, .26), transparent 58%),
+    radial-gradient(880px 640px at 96% -6%, rgba(139, 92, 246, .24), transparent 56%),
+    radial-gradient(760px 620px at 78% 42%, rgba(236, 72, 153, .13), transparent 55%),
+    radial-gradient(900px 760px at 30% 112%, rgba(16, 185, 129, .20), transparent 56%);
+  --glass: rgba(var(--panel-rgb), .70);
+  --glass-strong: rgba(var(--panel-rgb), .88);
+  --blur: blur(18px) saturate(170%);
+  --shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 10px 28px -14px rgba(15, 23, 42, .16);
+  --shadow-pop: 0 28px 70px -28px rgba(15, 23, 42, .42), 0 6px 18px -8px rgba(15, 23, 42, .14);
+  --chev: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m4 6 4 4 4-4' fill='none' stroke='%231D4ED8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+  --r-card: 20px;
+  --r-control: 12px;
+  --r-sheet: 26px;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #080C15;
+  --panel: #111827;
+  --panel-rgb: 17, 24, 39;
+  --ink: #F1F5F9;
+  --ink-2: #CBD5E1;
+  --muted: #94A3B8;
+  --line: rgba(255, 255, 255, .08);
+  --line-2: rgba(255, 255, 255, .16);
+  --soft: rgba(255, 255, 255, .05);
+  --accent: #60A5FA;
+  --accent-ink: #93C5FD;
+  --accent-soft: rgba(96, 165, 250, .16);
+  --accent-shadow: rgba(96, 165, 250, .36);
+  --warn-ink: #FCD34D;
+  --mesh:
+    radial-gradient(1000px 700px at 6% -10%, rgba(59, 130, 246, .30), transparent 58%),
+    radial-gradient(880px 640px at 96% -6%, rgba(139, 92, 246, .28), transparent 56%),
+    radial-gradient(760px 620px at 78% 42%, rgba(236, 72, 153, .14), transparent 55%),
+    radial-gradient(900px 760px at 30% 112%, rgba(16, 185, 129, .18), transparent 56%);
+  --glass: rgba(var(--panel-rgb), .62);
+  --glass-strong: rgba(var(--panel-rgb), .86);
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 12px 30px -16px rgba(0, 0, 0, .7);
+  --shadow-pop: 0 30px 70px -28px rgba(0, 0, 0, .8), 0 6px 18px -8px rgba(0, 0, 0, .5);
+  --chev: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m4 6 4 4 4-4' fill='none' stroke='%2393C5FD' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  color-scheme: dark;
+}
